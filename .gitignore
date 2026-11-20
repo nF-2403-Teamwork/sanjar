@@ -1,0 +1,61 @@
+# Credentials & secrets — NEVER commit
+auth.json
+.env
+.env.*
+*.bak*
+
+# Runtime databases & state
+state.db
+state.db-shm
+state.db-wal
+hermes_state.db
+response_store.db*
+gateway.pid
+gateway_state.json
+processes.json
+auth.lock
+active_profile
+.update_check
+profile.yaml
+
+# User data — NEVER commit
+memories/
+sessions/
+logs/
+plans/
+workspace/
+home/
+
+# Caches & generated artifacts
+*_cache/
+browser_screenshots/
+cache/
+
+# Infrastructure
+hermes-agent/
+.worktrees/
+profiles/
+bin/
+node_modules/
+local/
+checkpoints/
+sandboxes/
+backups/
+state-snapshots/
+errors.log
+.hermes_history
+skins/
+plugins/
+
+# Scheduler: only authored jobs
+cron/*
+!cron/jobs.json
+
+# Skills: ship only this distribution's own skill (bundled skills are synced by Hermes itself)
+skills/*
+!skills/hermes-docs/
+
+# Runtime caches written by Hermes
+models_dev_cache.*
+runtime/
+source-checks/

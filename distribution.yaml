@@ -1,0 +1,18 @@
+name: sanjar
+version: 1.0.0
+description: "Hermes Agent documentation expert — knows the full official docs at hermes-agent.nousresearch.com/docs"
+hermes_requires: ">=0.22.0"
+author: "nF-2403-Teamwork"
+license: "MIT"
+
+env_requires:
+  - name: OPENROUTER_API_KEY
+    description: "OpenRouter API key (the shipped config uses anthropic/claude-opus-4.6 via OpenRouter; change the model with `sanjar model`)"
+    required: false
+    default: ""
+
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skills/hermes-docs/
+  - distribution.yaml
